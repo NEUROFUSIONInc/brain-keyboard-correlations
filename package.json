@@ -1,0 +1,21 @@
+{
+  "name": "braindump",
+  "version": "1.0.0",
+  "description": "Train Notion recognize thoughts and conver to text",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bci",
+    "notion",
+    "gpt3"
+  ],
+  "author": "Ore Ogundipe",
+  "license": "ISC",
+  "dependencies": {
+    "@neurosity/notion": "^5.1.1",
+    "dotenv": "^8.2.0"
+  }
+}
