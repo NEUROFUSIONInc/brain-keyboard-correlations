@@ -29,9 +29,7 @@ const notion = new Notion({
   deviceId
 });
 
-const authNotion = async () => {
-  // suggestion, login with apikey / token
-  // i don't want to enter my neurosity email & password everywhere
+const main = async () => {
   await notion
     .login({
       email,
@@ -42,6 +40,11 @@ const authNotion = async () => {
       throw new Error(error);
     });
   console.log("Logged in");
+
+  notion.brainwaves("raw").subscribe(brainwaves => {
+    console.log(brainwaves);
+    return;
+  })
 };
 
-authNotion();
+main();
