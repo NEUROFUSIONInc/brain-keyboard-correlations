@@ -75,10 +75,10 @@ def write_outputs_to_csv(sessionname):
     prompt_df.to_csv(DATA_DIR + '\\{}-wordprompts.csv'.format(sessionname),
                     index=False, header=['timestamp', 'wordprompt'])
 
-def start_curia_stream():
-    pass
-
 if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        raise ValueError("Specify an identifier for this session. Same with what was sent to curiarecorder")
+
     activate_lsl_stream()
     display_words()
-    write_outputs_to_csv(str(int(time.time())))
+    write_outputs_to_csv(sys.argv[1])
