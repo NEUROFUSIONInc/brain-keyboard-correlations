@@ -7,3 +7,4 @@ Predictcolor
 .ipynb_checkpoints
 .vscode
 data
+__pycache__
