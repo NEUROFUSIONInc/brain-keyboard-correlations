@@ -22,8 +22,13 @@ Preprocessing Data
     - filter eeg data with keystroke data for every word sample
     - pick each entry for every sample
 
-- selecting what channels to use
+- filtering frequency
+    - use filtering methods in mne study template
+        - https://github.com/mne-tools/mne-study-template/blob/master/scripts/preprocessing/01-import_and_maxfilter.py
+        - https://github.com/mne-tools/mne-study-template/blob/master/scripts/preprocessing/02-frequency_filter.py
     - apply a band pass filter to remove harmoinic noise
+
+- selecting what channels to use
     - visualize fft for a single sample and pick the channel with the highest (but not weirdest)
         - x axis bins (0-55), y- axis voltage
         - plot all channels together
@@ -44,6 +49,10 @@ Preprocessing Data
 - record more experiments and performance
     - do the experiment a few different times on different days
 - clean up [scratch.ipynb](./scratch.ipynb) into a shareable script
+- consider transfer learning if gpt doesnt work well
 
 Inference
 how do we do inteference realtime on notion
+   - https://github.com/neurosity/eeg-pipes
+   - https://github.com/neurosity/brainwaves-node/blob/master/lowAlpha.js
+    
