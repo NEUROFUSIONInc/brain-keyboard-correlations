@@ -1,16 +1,18 @@
 # Brain Dump - Thought to text
 
-Goal: Recognize words in my thoughts and be able to write them as text in realtime
+Goal: feature extraction for signals that correlate brain activity with typing words/sentences on keyboard
 
 Approach:
 
 Experiment
+- Prompt a word and have user type it
+    - `python.exe collect.py session00x`
+    
 - Record raw eeg epoch as user is typing
     - start CuriaIO-rc3 - to log key data
     - use the curiarecorder - to record the data from different streams
     `.\curiarecorder\curiarecorder.exe record * data/session00x.csv`
-- Prompt a word and have user type it
-    - `python.exe collect.py session00x`
+
 
 ![Experiment Screenshot_0](./assets/demo_training_experiment_prompt.jpg)
 ![Experiment Screenshot](./assets/demo_training_experiment.jpg)
