@@ -17,6 +17,8 @@ Experiment
 ![Experiment Screenshot_0](./assets/demo_training_experiment_prompt.jpg)
 ![Experiment Screenshot](./assets/demo_training_experiment.jpg)
 
+![FFT for word on single channel with many samples](./assets/demo_fft_for_word_on_single_chan_many_samples.png)
+
 Preprocessing Data
 
 - choosing samples
