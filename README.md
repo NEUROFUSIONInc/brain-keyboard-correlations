@@ -5,6 +5,15 @@ Goal: feature extraction for signals that correlate brain activity with typing w
 Approach:
 
 Experiment
+- Start an lsl stream
+    (device instructions)
+    - muse
+        - `pip install muselsl`
+        - `muselsl stream`
+    - neurosity (notion 1,2 & crown)
+        I think the lsl stream is always active once devices are on
+    (eventually want to use brainflow for this)
+
 - Prompt a word and have user type it
     - `python.exe collect.py session00x`
     
@@ -19,7 +28,7 @@ Experiment
 
 ![FFT for word on single channel with many samples](./assets/demo_fft_for_word_on_single_chan_many_samples.png)
 
-Preprocessing Data
+## Preprocessing Data
 
 - choosing samples
     - find timestamp for every valid word entry in keystroke data
@@ -60,3 +69,15 @@ how do we do inteference realtime on notion
    - https://github.com/neurosity/eeg-pipes
    - https://github.com/neurosity/brainwaves-node/blob/master/lowAlpha.js
     
+## Roadmap
+7.08.2022
+    - the goal for today is:
+        - switch to brainflow for collecting data
+        - run the collect.py and make sure
+            - timestamp of prompts
+            - csv data with keypress is included
+
+8.08.2022
+    - get back to feature analyis
+        - generate an input matrix that can be fed into a classifier
+        - try multiple classifiers and measure
