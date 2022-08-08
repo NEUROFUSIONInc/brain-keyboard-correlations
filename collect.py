@@ -10,7 +10,7 @@ import pandas as pd
 
 WORDS = ("python", "jumble", "easy", "difficult", "answer",  "xylophone")
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
-DATA_DIR = BASE_DIR + "\\data"
+DATA_DIR = os.path.join( BASE_DIR, "data" )
 
 
 prompt_entries = [] # format of each entry is timestamp, wordprompt
@@ -54,7 +54,7 @@ def display_words():
 
             # generate next prompt
             window['wordprompt'].update(get_prompt())
-
+            
     window.close()
 
 def activate_lsl_stream():
@@ -64,7 +64,7 @@ def activate_lsl_stream():
         streams = resolve_stream('type', 'EEG')
         # create a new inlet to read from the stream
         inlet = StreamInlet(streams[0])
-        print("EEG Stream created")
+        print("EEG Stream created")  
     except KeyboardInterrupt as e:
         print("Ending program")
         raise e
