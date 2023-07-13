@@ -18,9 +18,9 @@ Experiment
     - `python.exe collect.py session00x`
     
 - Record raw eeg epoch as user is typing
-    - start CuriaIO-rc3 - to log key data
-    - use the curiarecorder - to record the data from different streams
-    `.\curiarecorder\curiarecorder.exe record * data/session00x.csv`
+  - Python Keylogger with timestamps - https://github.com/tamaramueller/keylogger
+
+    Data shuold look like this ![](./keylogger_screenshots.png)
 
 
 ![Experiment Screenshot_0](./assets/demo_training_experiment_prompt.jpg)
